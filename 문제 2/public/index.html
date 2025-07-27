@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dynamic Stream Demo</title>
+    <style>
+      body {
+        margin: 0;
+        background: #000;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+      #controls {
+        margin-bottom: 16px;
+      }
+      video {
+        width: 640px;
+        height: 360px;
+        background: #222;
+      }
+      #latency {
+        color: yellow;
+        margin-top: 8px;
+      }
+      input,
+      button {
+        padding: 4px 8px;
+        margin-right: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="controls">
+      <input type="file" id="file-input" accept="video/*" />
+      <input
+        type="text"
+        id="url-input"
+        placeholder="https://.../video.mp4"
+        size="40"
+      />
+      <button id="btn-url">Load URL</button>
+    </div>
+    <video id="video" autoplay playsinline></video>
+    <div id="latency">지연: -- ms</div>
+    <script src="main.js"></script>
+  </body>
+</html>
